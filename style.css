@@ -1,1 +1,66 @@
+head{
+  min-width: 500px;
+  margin-left: 300px;
+  margin-right: 300px;
+}
 
+.head{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  display: flex;
+}
+
+body{
+  min-width: 400px;
+  /*background-color: #eaeaea;*/
+  margin-left: 10px;
+  margin-right: 10px;
+  /*width: 350px;
+  height: 550px;
+  border:2px solid black;
+  padding: 35px;
+  box-shadow:0 4px 8px 0 rgba(0,0,0,0.5);*/
+}
+
+.card{
+  min-width: 400px;
+  display: flex;
+  margin-left: 10px;
+  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card1{
+  min-width: 10px;
+  margin-left: 1px;
+  margin-right: 20px;
+  text-align: center;
+  border: 1px solid black;
+  padding: 10px;
+  width: 300px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card2{
+  min-width: 10px;
+  margin-left: 20px;
+  margin-right: 1px;
+  text-align: center;
+  border: 1px solid black;
+  padding: 10px;
+  width: 300px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+.image{
+  min-width: 10px;
+  align-self: center;
+  width:80%
+}
