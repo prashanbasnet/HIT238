@@ -14,14 +14,8 @@ head{
 
 body{
   min-width: 400px;
-  /*background-color: #eaeaea;*/
   margin-left: 10px;
   margin-right: 10px;
-  /*width: 350px;
-  height: 550px;
-  border:2px solid black;
-  padding: 35px;
-  box-shadow:0 4px 8px 0 rgba(0,0,0,0.5);*/
 }
 
 .card{
