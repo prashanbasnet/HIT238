@@ -83,7 +83,7 @@ var result = h +":"+ m;
 sleepdifference.value=result;
 });
 
-//
+//script for calculation of total extra time
 var cal_extra = document.querySelector("#cal_extra");
 cal_extra.addEventListener('click',function(event){
   event.preventDefault();
