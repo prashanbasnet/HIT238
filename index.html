@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="style.css">
-  <h1>Hello</h1>
+  <title>My Home</title>
   <br>
 </head>
 
 <body>
-  <script src="script.js"></script>
+  <h1>Hello</h1>
   <h2 class="head">My Fitness</h2>
   <div class="card">
     <div class="card1">
@@ -15,22 +15,19 @@
       <img class="image" src="schedule.png" alt="Schedule">
       <br>
       <br>
-      <button>Select</button>
+      <input type="button" value="Select" onclick="window.location.href='Schedule/schedule.html'"/>
     </div>
     <div class="card2">
       <h3>My statistics</h3>
       <img class="image" src="statistics.png" alt="statistics">
       <br>
       <br>
-      <button>Select</button>
+      <input type="button" value="Select" onclick="window.location.href='Statistics/statistics.html'"/>
     </div>
   </div>
   <br>
   <div class="head">
-    <link rel="location" href="my_location.html" alt="location">
-    <button id="map" href="my_location.html">View My Location</button>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <input type="button" value="View my location" onclick="window.location.href='Location/my_location.html'"/>
   </div>
 </body>
 
