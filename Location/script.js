@@ -46,3 +46,9 @@ if("geolocation" in navigator) {
     }
   )
 };
+
+function goBack()
+  {
+  window.history.back()
+  }
+;

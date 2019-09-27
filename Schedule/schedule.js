@@ -20,12 +20,9 @@ if(splitStartTime[1]>splitEndTime[1]){
   h = splitEndTime[0]-splitStartTime[0];
   m = splitEndTime[1]-splitStartTime[1];
 }
-
-
 var result = h +":"+ m;
 workdifference.value=result;
 });
-
 
 //script for calculation of total exercise time
 var cal_exercise = document.querySelector("#cal_exercise");
@@ -49,8 +46,6 @@ if(splitStartTime[1]>splitEndTime[1]){
   h = splitEndTime[0]-splitStartTime[0];
   m = splitEndTime[1]-splitStartTime[1];
 }
-
-
 var result = h +":"+ m;
 exercisedifference.value=result;
 });
@@ -77,8 +72,6 @@ if(splitStartTime[1]>splitEndTime[1]){
   h = splitEndTime[0]-splitStartTime[0];
   m = splitEndTime[1]-splitStartTime[1];
 }
-
-
 var result = h +":"+ m;
 sleepdifference.value=result;
 });
@@ -106,7 +99,13 @@ if(splitStartTime[1]>splitEndTime[1]){
   m = splitEndTime[1]-splitStartTime[1];
 }
 
-
 var result = h +":"+ m;
 extradifference.value=result;
 });
+
+//script for "Go back" button
+function goBack()
+  {
+  window.history.back()  //goes straight back to the history
+  }
+;
