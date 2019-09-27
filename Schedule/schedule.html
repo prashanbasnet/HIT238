@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>My Schedule</title>
+</head>
+
+<body class="card">
+  <h1>My Schedule</h1>
+    <p>This is my schedule</p>
+  <form action="/action_page.php">
+    Work:
+    <input id="worktime"type="time" name="usr_time" value="10:30" />
+    <label>End work time</label>
+    <input id="workendtime"type="time" name="usr_time" value="15:10" />
+    <input id="difference" type="text" value="" />
+    <button id="cal">Calculate</button>
+    <br>
+    Exercise:
+    <input type="time" name="usr_time">
+    <br>
+    Extra:
+    <input type="time" name="usr_time" value="10:00">
+  </form>
+
+  <script>
+  var cal = document.querySelector("#cal");
+  cal.addEventListener('click',function(event){
+    event.preventDefault();
+  var worktime=document.getElementById("worktime");
+  var workendtime=document.getElementById("workendtime");
+  var difference= document.getElementById("difference");
+  splitStartTime = worktime.value.split(":");
+  splitEndTime= workendtime.value.split(":");
+  var h;
+  var m;
+  if(splitStartTime[1]>splitEndTime[1]){
+     var hr=splitEndTime[0]-1;
+     //console.log(hr);
+     var min=parseInt(splitEndTime[1])+60;
+     //console.log(min);
+    h = hr-splitStartTime[0];
+    m = min-splitStartTime[1];
+  }else{
+    h = splitEndTime[0]-splitStartTime[0];
+    m = splitEndTime[1]-splitStartTime[1];
+  }
+
+
+  var result = h +":"+ m;
+  difference.value=result;
+});
+  </script>
+  </body>
+</html>
