@@ -1,8 +1,13 @@
 #map {
   min-width: 400px;
-  height: 50%;
+  height: 90%;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
+#button {
+
+}
 html, body {
       min-width: 400px;
       height: 100%;

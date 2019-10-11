@@ -1,54 +1,40 @@
-var map;
+// Note: This example requires that you consent to location sharing when
+// prompted by your browser. If you see the error "The Geolocation service
+// failed.", it means you probably did not give permission for the browser to
+// locate you.
+var map, infoWindow;
 function initMap() {
-  map = new L.Map("map", {
-      center: new L.LatLng(-12.37, 130.87),
-      zoom: 14,
-      layers: new L.TileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png")
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: -12.4122, lng: 130.8678},
+    zoom: 14
   });
-}
+  infoWindow = new google.maps.InfoWindow;
 
-/**
-* @param {number} lat The latitude to add a marker at
-* @param {number} lng The longitude to add a marker at
-* @return {google.maps.Marker} The created marker
-**/
+  // Try HTML5 geolocation.
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
 
-function addMarker(lat, lng) {
-  var marker = new L.Marker(new L.LatLng(lat, lng));
-  marker.bindPopup("You are here");
-  map.addLayer(marker);
-  return marker;
-}
-
-/**
-* @param {google.maps.Marker} Marker A marker to move
-* @param {number} lat The latitude to add a marker at
-* @param {number} lng The longitude to add a marker at
-* @return {google.maps.Marker} The moved marker
-**/
-function moveMarker(marker, lat, lng) {
-  var newLatLng = new L.LatLng(lat, lng);
-  marker.setLatLng(newLatLng);
-  return marker;
-}
-
-initMap();
-
-// Write your code here
-
-if("geolocation" in navigator) {
-    // location services are available
-  navigator.geolocation.getCurrentPosition(
-    function(position) {
-      console.log(position);
-      console.log('Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}');
-      addMarker(position.coords.latitude, position.coords.longitude);
-    }
-  )
-};
-
-function goBack()
-  {
-  window.history.back()
+      infoWindow.setPosition(pos);
+      infoWindow.setContent('You are here');
+      infoWindow.open(map);
+      map.setCenter(pos);
+    }, function() {
+      handleLocationError(true, infoWindow, map.getCenter());
+    });
+  } else {
+    // Browser doesn't support Geolocation
+    handleLocationError(false, infoWindow, map.getCenter());
   }
-;
+}
+
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+  infoWindow.setPosition(pos);
+  infoWindow.setContent(browserHasGeolocation ?
+                        'Error: The Geolocation service failed.' :
+                        'Error: Your browser doesn\'t support geolocation.');
+  infoWindow.open(map);
+}
