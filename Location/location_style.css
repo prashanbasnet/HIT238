@@ -1,13 +1,12 @@
 #map {
   min-width: 400px;
-  height: 90%;
+  height: 85%;
   margin-left: 10px;
   margin-right: 10px;
 }
 
-body {
+html, body {
   min-width: 400px;
-  zoom: 2;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -15,4 +14,10 @@ body {
 
 button {
   float: right;
+  margin-right: 5px;
+  zoom: 2;
+}
+
+h1{
+  zoom: 2;
 }
