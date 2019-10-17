@@ -4,6 +4,11 @@ head{
   margin-right: 300px;
 }
 
+body{
+  min-width: 400px;
+  zoom: 2;
+}
+
 .head{
   text-align: center;
   justify-content: center;
@@ -12,11 +17,6 @@ head{
   display: flex;
 }
 
-body{
-  min-width: 400px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
 
 .card{
   min-width: 400px;

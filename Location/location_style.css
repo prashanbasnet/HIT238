@@ -5,12 +5,14 @@
   margin-right: 10px;
 }
 
+body {
+  min-width: 400px;
+  zoom: 2;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 button {
   float: right;
 }
-html, body {
-      min-width: 400px;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }

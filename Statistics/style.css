@@ -1,6 +1,6 @@
-html,
 body {
   min-width: 400px;
+  zoom: 2;
 }
 
 #chart {
