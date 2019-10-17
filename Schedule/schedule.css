@@ -5,8 +5,8 @@
   margin-right: 10px;
 }
 
-#button {
-
+button {
+  float: right;
 }
 html, body {
       min-width: 400px;
