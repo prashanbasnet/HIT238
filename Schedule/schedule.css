@@ -5,14 +5,15 @@
   margin-right: 10px;
 }
 
-button {
-  float: right;
-}
-
 body {
   min-width: 400px;
   zoom: 2;
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+.back {
+  float: right;
+  margin-right: 10px;
 }
