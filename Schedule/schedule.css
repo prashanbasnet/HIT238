@@ -1,0 +1,16 @@
+#map {
+  min-width: 400px;
+  height: 90%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#button {
+
+}
+html, body {
+      min-width: 400px;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
