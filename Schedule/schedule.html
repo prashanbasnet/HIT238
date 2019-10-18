@@ -11,33 +11,34 @@
   <form action="/action_page.php">
     Work:
     <input id="worktime"type="time" name="usr_time" value=""/>
-    <label>End work time</label>
+    <label>End work time</label
     <input id="workendtime"type="time" name="usr_time" value=""/>
-    <input id="workdifference" type="text" value=""/>
+    <input id="workdifference" class="calculate" type="text" value=""/>
     <button id="cal_work">Calculate</button>
     <br>
     Exercise:
     <input id="exercisetime" type="time" name="usr_time" value=""/>
     <label>End exercise time</label>
     <input id="exerciseendtime" type="time" name="usr_time" value=""/>
-    <input id="exercisedifference" type="text" value=""/>
+    <input id="exercisedifference" class="calculate" type="text" value=""/>
     <button id="cal_exercise">Calculate</button>
     <br>
     Sleep:
     <input id="sleeptime"type="time" name="usr_time" value=""/>
     <label>End work time</label>
     <input id="sleependtime"type="time" name="usr_time" value=""/>
-    <input id="sleepdifference" type="text" value=""/>
+    <input id="sleepdifference" class="calculate" type="text" value=""/>
     <button id="cal_sleep">Calculate</button>
     <br>
     Extra:
     <input id= "extratime" type="time" name="usr_time" value=""/>
     <label>End time</label>
     <input id="extraendtime"type="time" name="usr_time" value=""/>
-    <input id="extradifference" type="text" value=""/>
+    <input id="extradifference" class="calculate" type="text" value=""/>
     <button id="cal_extra">Calculate</button>
   </form>
   <br>
+  <button onclick="save()" class="save">Save</button>
   <button onclick="goBack()" class="back">Go Back</button>
   <script src="schedule.js"></script>
   </body>

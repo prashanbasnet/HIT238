@@ -1,19 +1,22 @@
-#map {
-  min-width: 400px;
-  height: 90%;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
 body {
   min-width: 400px;
   zoom: 2;
   height: 100%;
-  margin: 0;
+  margin-left: 10px;
+  margin-right: 10px;
   padding: 0;
+}
+
+.calculate{
+  width: 15%;
+}
+
+.save{
+    float: left;
+    margin-left: 5px;
 }
 
 .back {
   float: right;
-  margin-right: 10px;
+  margin-right: 5px;
 }
