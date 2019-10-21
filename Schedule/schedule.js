@@ -22,6 +22,7 @@ if(splitStartTime[1]>splitEndTime[1]){
 }
 var result = h +":"+ m;
 workdifference.value=result;
+sessionStorage.setItem('work_hour', h);
 });
 
 //script for calculation of total exercise time
@@ -48,6 +49,7 @@ if(splitStartTime[1]>splitEndTime[1]){
 }
 var result = h +":"+ m;
 exercisedifference.value=result;
+sessionStorage.setItem('exercise_hour', h);
 });
 
 //script for calculation of total sleep time
@@ -74,6 +76,7 @@ if(splitStartTime[1]>splitEndTime[1]){
 }
 var result = h +":"+ m;
 sleepdifference.value=result;
+sessionStorage.setItem('sleep_hour', h);
 });
 
 //script for calculation of total extra time
@@ -101,6 +104,7 @@ if(splitStartTime[1]>splitEndTime[1]){
 
 var result = h +":"+ m;
 extradifference.value=result;
+sessionStorage.setItem('extra_hour', h);
 });
 
 //script for "Go back" button

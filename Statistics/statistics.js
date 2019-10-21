@@ -1,22 +1,33 @@
 //chart data
+console.log(sessionStorage.getItem('work_hour'));
+console.log(sessionStorage.getItem('exercise_hour'));
+console.log(sessionStorage.getItem('sleep_hour'));
+console.log(sessionStorage.getItem('extra_hour'));
+
+var work_hour=sessionStorage.getItem('work_hour');
+var exercise_hour=sessionStorage.getItem('exercise_hour');
+var sleep_hour=sessionStorage.getItem('sleep_hour');
+var extra_hour=sessionStorage.getItem('extra_hour');
+
 var chartjson = {
   "title": "My Statistics",
   "data": [{
     "name": "Work",
-    "score": 40
+    "score": work_hour
   }, {
     "name": "Exercise",
-    "score": 10
+    "score": exercise_hour
   }, {
     "name": "Sleep",
-    "score": 30
+    "score": sleep_hour
   }, {
     "name": "Extra",
-    "score": 20
+    "score": extra_hour
   }],
-  "xtitle": "Hours in %",
+  "xtitle": "Hours",
   "ytitle": "Works",
   "ymax": 100,
+  "xmax": 100,
   "ykey": 'score',
   "xkey": "name",
   "prefix": "%"
