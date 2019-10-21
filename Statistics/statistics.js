@@ -27,7 +27,6 @@ var chartjson = {
   "xtitle": "Hours",
   "ytitle": "Works",
   "ymax": 100,
-  "xmax": 100,
   "ykey": 'score',
   "xkey": "name",
   "prefix": "%"
