@@ -2,11 +2,13 @@
 console.log(sessionStorage.getItem('work_hour'));
 console.log(sessionStorage.getItem('exercise_hour'));
 console.log(sessionStorage.getItem('sleep_hour'));
+console.log(sessionStorage.getItem('study_hour'));
 console.log(sessionStorage.getItem('extra_hour'));
 
 var work_hour=sessionStorage.getItem('work_hour');
 var exercise_hour=sessionStorage.getItem('exercise_hour');
 var sleep_hour=sessionStorage.getItem('sleep_hour');
+var study_hour=sessionStorage.getItem('study_hour');
 var extra_hour=sessionStorage.getItem('extra_hour');
 
 var chartjson = {
@@ -20,6 +22,9 @@ var chartjson = {
   }, {
     "name": "Sleep",
     "score": sleep_hour
+  }, {
+    "name": "Study",
+    "score": study_hour
   }, {
     "name": "Extra",
     "score": extra_hour

@@ -102,9 +102,37 @@ if(splitStartTime[1]>splitEndTime[1]){
   m = splitEndTime[1]-splitStartTime[1];
 }
 
+//script for calculation of total study time
 var result = h +":"+ m;
-extradifference.value=result;
-sessionStorage.setItem('extra_hour', h);
+studydifference.value=result;
+sessionStorage.setItem('study_hour', h);
+});
+
+var cal_extra = document.querySelector("#cal_study");
+cal_extra.addEventListener('click',function(event){
+  event.preventDefault();
+var extratime=document.getElementById("studytime");
+var extraendtime=document.getElementById("studyendtime");
+var extradifference= document.getElementById("studydifference");
+splitStartTime = studytime.value.split(":");
+splitEndTime= studyendtime.value.split(":");
+var h;
+var m;
+if(splitStartTime[1]>splitEndTime[1]){
+   var hr=splitEndTime[0]-1;
+   //console.log(hr);
+   var min=parseInt(splitEndTime[1])+60;
+   //console.log(min);
+  h = hr-splitStartTime[0];
+  m = min-splitStartTime[1];
+}else{
+  h = splitEndTime[0]-splitStartTime[0];
+  m = splitEndTime[1]-splitStartTime[1];
+}
+
+var result = h +":"+ m;
+studydifference.value=result;
+sessionStorage.setItem('study_hour', h);
 });
 
 //script for "Go back" button
